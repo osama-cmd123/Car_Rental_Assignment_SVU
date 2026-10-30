@@ -1,0 +1,231 @@
+/* تنسيق الخطوط والألوان العامة*/
+body {
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 14px;
+    color: #222222;
+    background-color: #f4f6f9;
+    margin: 0px;
+    padding: 0px;
+    direction: rtl;
+    line-height: 1.6;
+}
+
+h1, h2, h3, p, a, span, label, legend, th, td, li {
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+/* الترويسة وشريط التنقل */
+#header {
+    background-color: #1b4f72;
+    color: #ffffff;
+    padding: 18px 10px;
+    text-align: center;
+    border-bottom: 4px solid #113247;
+}
+
+#header h1 {
+    margin: 0px 0px 6px 0px;
+    font-size: 24px;
+}
+
+#header p {
+    margin: 0px;
+    font-size: 13px;
+    color: #d6eaf8;
+}
+
+#navbar {
+    background-color: #2874a6;
+    text-align: center;
+    padding: 10px 0px;
+}
+
+#navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 8px 18px;
+    margin: 0px 4px;
+    border-radius: 4px;
+}
+
+#navbar a:hover, #navbar a.active {
+    background-color: #113247;
+    color: #f9e79f;
+}
+
+/* الحاوية */
+.container {
+    width: 88%;
+    max-width: 980px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 22px;
+    border: 1px solid #d0d7de;
+}
+
+h2.page-title {
+    color: #1b4f72;
+    font-size: 19px;
+    border-bottom: 2px solid #2874a6;
+    padding-bottom: 8px;
+    margin-top: 0px;
+}
+
+h3.sub-title {
+    color: #113247;
+    font-size: 16px;
+    margin-top: 18px;
+    margin-bottom: 8px;
+}
+
+/* تنسيق الجداول */
+table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0px;
+    background-color: #ffffff;
+}
+
+table.data-table th {
+    background-color: #1b4f72;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 8px;
+    border: 1px solid #113247;
+    text-align: center;
+}
+
+table.data-table td {
+    padding: 9px 8px;
+    border: 1px solid #cccccc;
+    text-align: center;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+table.data-table tr.alt-row {
+    background-color: #f8f9fa;
+}
+
+/* التفاصيل الإضافية للسيارات */
+tr.details-row {
+    display: none;
+    background-color: #ebf5fb;
+}
+
+tr.details-row td {
+    text-align: right;
+    padding: 12px 18px;
+    color: #154360;
+    border: 1px solid #a9cce3;
+}
+
+.car-thumb {
+    width: 115px;
+    height: 70px;
+    border: 1px solid #bbbbbb;
+    margin-top: 4px;
+}
+
+/* تنسيق النماذج*/
+fieldset {
+    border: 1px solid #2874a6;
+    padding: 16px 20px;
+    margin-top: 20px;
+    background-color: #fafcfe;
+}
+
+legend {
+    font-weight: bold;
+    color: #1b4f72;
+    font-size: 16px;
+    padding: 2px 10px;
+}
+
+.form-row {
+    margin-bottom: 12px;
+}
+
+.form-row label {
+    display: inline-block;
+    width: 230px;
+    font-weight: bold;
+    color: #1b4f72;
+}
+
+/*عناصر الادخال*/
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    width: 280px;
+    padding: 6px 8px;
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 14px;
+    color: #154360;
+    background-color: #eef6fc;
+    border: 1px solid #5499c7;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus {
+    background-color: #ffffff;
+    border-color: #1b4f72;
+}
+
+/* تنسيق الأزرار */
+.btn {
+    background-color: #2874a6;
+    color: #ffffff;
+    border: 1px solid #1b4f72;
+    padding: 8px 24px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 6px 4px;
+}
+
+.btn:hover {
+    background-color: #1b4f72;
+}
+
+.btn-exit {
+    background-color: #922b21;
+    border-color: #641e16;
+}
+
+/* صندوق عرض النتيجة*/
+.note-box {
+    background-color: #fef9e7;
+    border: 1px solid #f4d03f;
+    padding: 12px 15px;
+    margin-top: 15px;
+    color: #5d4037;
+}
+
+#resultBox {
+    display: none;
+    background-color: #e8f8f5;
+    border: 2px solid #1abc9c;
+    padding: 15px;
+    margin-top: 18px;
+    color: #0e6251;
+}
+
+#bookingSection {
+    display: none;
+}
+
+/* الذيل*/
+#footer {
+    text-align: center;
+    padding: 14px;
+    font-size: 13px;
+    color: #555555;
+    border-top: 1px solid #d0d7de;
+    margin-top: 25px;
+    background-color: #eaecee;
+}

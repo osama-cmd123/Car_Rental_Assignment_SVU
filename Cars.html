@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ar" dir="rtl">
+<head>
+    <meta content="text/html" />
+    <title>مكتب الشام لتأجير السيارات - السيارات والحجز</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="myFunctions.js"></script>
+</head>
+<body>
+
+    <div id="header">
+        <h1>مكتب الشام لتأجير السيارات - Car Rental Website</h1>
+        <p>قائمة السيارات المتوفرة للتأجير ونموذج الحجز الإلكتروني</p>
+    </div>
+
+    <div id="navbar">
+        <a href="home.html">الصفحة الرئيسية (Home)</a>
+        <a href="AboutUs.html">من نحن (About Us)</a>
+        <a href="Cars.html" class="active">السيارات والحجز (Cars)</a>
+        <a href="#exit" onclick="exitWebsite(); return false;" class="btn-exit">خروج</a>
+    </div>
+
+    <div class="container">
+        <h2 class="page-title">جدول السيارات المتوفرة للتأجير</h2>
+        <p>
+            يمكنك الضغط على المربع في عمود <strong>"إظهار التفاصيل"</strong> لعرض المواصفات الإضافية لأي سيارة (أو عدة سيارات معاً)، ثم تحديد السيارة أو السيارات المطلوبة من عمود <strong>"اختيار"</strong> والضغط على زر <strong>"متابعة"</strong> لاستكمال طلب الحجز.
+        </p>
+
+        <form id="carsSelectionForm" action="" method="post" onsubmit="return false;">
+            <table id="carsTable" class="data-table">
+                <thead>
+                    <tr>
+                        <th>الرمز</th>
+                        <th>الموديل والصورة</th>
+                        <th>سنة الصنع</th>
+                        <th>السعر اليومي</th>
+                        <th>إظهار التفاصيل</th>
+                        <th>اختيار</th>
+                    </tr>
+                </thead>
+                <tbody>
+                   
+                    <tr class="car-row">
+                        <td>CR-001</td>
+                        <td>
+                            <strong>Toyota Corolla</strong><br />
+                            <img src="images/corolla.png" alt="Toyota Corolla" class="car-thumb" />
+                        </td>
+                        <td>2023</td>
+                        <td>250000 ل.س</td>
+                        <td>
+                            <input type="checkbox" class="toggle-details" value="details-1" title="إظهار أو إخفاء تفاصيل Toyota Corolla" />
+                        </td>
+                        <td>
+                            <input type="checkbox" name="selectedCar" value="CR-001" data-model="Toyota Corolla (CR-001)" data-price="250000" title="اختيار Toyota Corolla" />
+                        </td>
+                    </tr>
+                    <tr id="details-1" class="details-row">
+                        <td colspan="6">
+                            <strong>تفاصيل السيارة (CR-001 - Toyota Corolla):</strong>
+                            نوع الوقود: بنزين | ناقل الحركة: أوتوماتيك | عدد المقاعد: 5 مقاعد | عداد الكيلومترات: 18,500 كم | اللون: أزرق معدني.
+                        </td>
+                    </tr>
+
+                    <!-- السيارة الثانية CR-002 -->
+                    <tr class="car-row alt-row">
+                        <td>CR-002</td>
+                        <td>
+                            <strong>Kia Sportage</strong><br />
+                            <img src="images/sportage.png" alt="Kia Sportage" class="car-thumb" />
+                        </td>
+                        <td>2022</td>
+                        <td>400000 ل.س</td>
+                        <td>
+                            <input type="checkbox" class="toggle-details" value="details-2" title="إظهار أو إخفاء تفاصيل Kia Sportage" />
+                        </td>
+                        <td>
+                            <input type="checkbox" name="selectedCar" value="CR-002" data-model="Kia Sportage (CR-002)" data-price="400000" title="اختيار Kia Sportage" />
+                        </td>
+                    </tr>
+                    <tr id="details-2" class="details-row">
+                        <td colspan="6">
+                            <strong>تفاصيل السيارة (CR-002 - Kia Sportage):</strong>
+                            نوع الوقود: بنزين | ناقل الحركة: أوتوماتيك | عدد المقاعد: 5 مقاعد | عداد الكيلومترات: 32,000 كم | اللون: أحمر عنابي.
+                        </td>
+                    </tr>
+
+                    <!-- السيارة الثالثة CR-003 -->
+                    <tr class="car-row">
+                        <td>CR-003</td>
+                        <td>
+                            <strong>Hyundai Elantra</strong><br />
+                            <img src="images/elantra.png" alt="Hyundai Elantra" class="car-thumb" />
+                        </td>
+                        <td>2024</td>
+                        <td>300000 ل.س</td>
+                        <td>
+                            <input type="checkbox" class="toggle-details" value="details-3" title="إظهار أو إخفاء تفاصيل Hyundai Elantra" />
+                        </td>
+                        <td>
+                            <input type="checkbox" name="selectedCar" value="CR-003" data-model="Hyundai Elantra (CR-003)" data-price="300000" title="اختيار Hyundai Elantra" />
+                        </td>
+                    </tr>
+                    <tr id="details-3" class="details-row">
+                        <td colspan="6">
+                            <strong>تفاصيل السيارة (CR-003 - Hyundai Elantra):</strong>
+                            نوع الوقود: هجين (هايبرد) | ناقل الحركة: أوتوماتيك | عدد المقاعد: 5 مقاعد | عداد الكيلومترات: 9,200 كم | اللون: أخضر زيتي.
+                        </td>
+                    </tr>
+
+                    <!-- السيارة الرابعة CR-004 -->
+                    <tr class="car-row alt-row">
+                        <td>CR-004</td>
+                        <td>
+                            <strong>Chevrolet Spark</strong><br />
+                            <img src="images/spark.png" alt="Chevrolet Spark" class="car-thumb" />
+                        </td>
+                        <td>2021</td>
+                        <td>180000 ل.س</td>
+                        <td>
+                            <input type="checkbox" class="toggle-details" value="details-4" title="إظهار أو إخفاء تفاصيل Chevrolet Spark" />
+                        </td>
+                        <td>
+                            <input type="checkbox" name="selectedCar" value="CR-004" data-model="Chevrolet Spark (CR-004)" data-price="180000" title="اختيار Chevrolet Spark" />
+                        </td>
+                    </tr>
+                    <tr id="details-4" class="details-row">
+                        <td colspan="6">
+                            <strong>تفاصيل السيارة (CR-004 - Chevrolet Spark):</strong>
+                            نوع الوقود: بنزين اقتصادي | ناقل الحركة: عادي | عدد المقاعد: 4 مقاعد | عداد الكيلومترات: 45,000 كم | اللون: ذهبي.
+                        </td>
+                    </tr>
+
+                    <!-- السيارة الخامسة CR-005 -->
+                    <tr class="car-row">
+                        <td>CR-005</td>
+                        <td>
+                            <strong>Kia Cerato</strong><br />
+                            <img src="images/cerato.png" alt="Kia Cerato" class="car-thumb" />
+                        </td>
+                        <td>2023</td>
+                        <td>280000 ل.س</td>
+                        <td>
+                            <input type="checkbox" class="toggle-details" value="details-5" title="إظهار أو إخفاء تفاصيل Kia Cerato" />
+                        </td>
+                        <td>
+                            <input type="checkbox" name="selectedCar" value="CR-005" data-model="Kia Cerato (CR-005)" data-price="280000" title="اختيار Kia Cerato" />
+                        </td>
+                    </tr>
+                    <tr id="details-5" class="details-row">
+                        <td colspan="6">
+                            <strong>تفاصيل السيارة (CR-005 - Kia Cerato):</strong>
+                            نوع الوقود: بنزين | ناقل الحركة: أوتوماتيك | عدد المقاعد: 5 مقاعد | عداد الكيلومترات: 21,400 كم | اللون: رمادي غامق.
+                        </td>
+                    </tr>
+
+                    <!-- السيارة السادسة CR-006 -->
+                    <tr class="car-row alt-row">
+                        <td>CR-006</td>
+                        <td>
+                            <strong>Hyundai Tucson</strong><br />
+                            <img src="images/tucson.png" alt="Hyundai Tucson" class="car-thumb" />
+                        </td>
+                        <td>2024</td>
+                        <td>450000 ل.س</td>
+                        <td>
+                            <input type="checkbox" class="toggle-details" value="details-6" title="إظهار أو إخفاء تفاصيل Hyundai Tucson" />
+                        </td>
+                        <td>
+                            <input type="checkbox" name="selectedCar" value="CR-006" data-model="Hyundai Tucson (CR-006)" data-price="450000" title="اختيار Hyundai Tucson" />
+                        </td>
+                    </tr>
+                    <tr id="details-6" class="details-row">
+                        <td colspan="6">
+                            <strong>تفاصيل السيارة (CR-006 - Hyundai Tucson):</strong>
+                            نوع الوقود: ديزل | ناقل الحركة: أوتوماتيك | عدد المقاعد: 7 مقاعد | عداد الكيلومترات: 11,000 كم | اللون: فضي فيراني.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div style="text-align: center; margin-top: 15px;">
+                <input type="button" id="continueBtn" class="btn" value="متابعة" onclick="showBookingForm();" />
+            </div>
+        </form>
+
+        <!-- قسم نموذج الحجز الإلكتروني يظهر عند الضغط على زر متابعة -->
+        <div id="bookingSection">
+            <form id="rentalForm" action="" method="post" onsubmit="return validateAndCalculate();">
+                <fieldset>
+                    <legend>نموذج طلب الحجز الإلكتروني</legend>
+                    <p>ملاحظة: الحقول المشار إليها بعلامة (*) إلزامية الإدخال، وباقي الحقول اختيارية ولكن يتم التحقق من صحة صيغتها في حال إدخالها.</p>
+
+                    <div class="form-row">
+                        <label for="fullName">الاسم الكامل لمقدم الطلب:</label>
+                        <input type="text" id="fullName" name="fullName" title="أحرف هجائية عربية فقط" />
+                        <span> (أحرف هجائية عربية فقط)</span>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="nationalId">الرقم الوطني (*):</label>
+                        <input type="text" id="nationalId" name="nationalId" maxlength="11" title="11 خانة وأول خانتين 01-14" />
+                        <span> (إلزامي - 11 خانة، أول خانتين للمحافظة 01-14)</span>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="startDate">تاريخ بداية التأجير (*):</label>
+                        <input type="text" id="startDate" name="startDate" maxlength="10" title="بصيغة yyyy-mm-dd" />
+                        <span> (إلزامي - بصيغة <span dir="ltr">yyyy-mm-dd</span> مثال: <span dir="ltr">2026-11-01</span>)</span>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="endDate">تاريخ نهاية التأجير (*):</label>
+                        <input type="text" id="endDate" name="endDate" maxlength="10" title="بصيغة yyyy-mm-dd" />
+                        <span> (إلزامي - بصيغة <span dir="ltr">yyyy-mm-dd</span> ولاحق لتاريخ البداية)</span>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="mobileNumber">رقم الموبايل:</label>
+                        <input type="text" id="mobileNumber" name="mobileNumber" maxlength="10" title="يطابق شبكتي Syriatel أو MTN" />
+                        <span> (يطابق شبكتي Syriatel أو MTN مثال: 0933123456)</span>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="emailAddress">البريد الإلكتروني:</label>
+                        <input type="text" id="emailAddress" name="emailAddress" title="البريد الإلكتروني" />
+                        <span> (مثال: name@example.com)</span>
+                    </div>
+
+                    <div>
+                        <input type="submit" id="submitBtn" class="btn" value="إرسال" />
+                        <input type="reset" id="resetBtn" class="btn btn-exit" value="مسح الحقول" />
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+
+        
+        <div id="resultBox"></div>
+
+    </div>
+
+    <div id="footer">
+        <p>جميع الحقوق محفوظة &#169; 2026 - مكتب الشام لتأجير السيارات | <a href="home.html">العودة إلى الصفحة الرئيسية</a></p>
+    </div>
+
+</body>
+</html>
