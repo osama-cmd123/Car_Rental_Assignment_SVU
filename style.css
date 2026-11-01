@@ -229,3 +229,15 @@ input[type="tel"]:focus {
     margin-top: 25px;
     background-color: #eaecee;
 }
+/*  صورة الغلاف */
+.cover-box {
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.home-cover {
+    width: 100%;
+    max-width: 940px;
+    height: auto;
+    border: 1px solid #1b4f72;
+}
